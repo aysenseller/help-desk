@@ -1,0 +1,16 @@
+[
+    {
+        "id": 2,
+        "title": "Ticket 1",
+        "description": "Test",
+        "priority": "High",
+        "status": "Resolved"
+    },
+    {
+        "id": 3,
+        "title": "Ticket 2",
+        "description": "Test",
+        "priority": "Low",
+        "status": "Open"
+    }
+]
