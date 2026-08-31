@@ -55,25 +55,32 @@ class TicketManager:
         return False
 
     def get_statistics(self):
-        stats = {
-            "total":len(self.tickets),
-            "open":0,
-            "in_progress":0,
-            "resolved":0,
-            "closed":0
-        }
+        total = len(self.tickets)
+        open_count = 0
+        in_progress_count = 0
+        resolved_count = 0
+        closed_count = 0
 
         for ticket in self.tickets:
             if ticket.status == "Open":
-                stats["open"]+=1
-            elif ticket.status == "In Progress":
-                stats["in_progress"] +=1
-            elif ticket.status == "Resolved":
-                stats["resolved"]+= 1
-            elif ticket.closed == "Closed":
-                stats["closed"]+= 1
+                open_count += 1
 
-        return stats
+            elif ticket.status == "In progress":
+                in_progress_count += 1
+
+            elif ticket.status == "Resolved":
+                resolved_count += 1
+
+            elif ticket.status == "Closed":
+                closed_count += 1
+
+        return {
+            "total": total,
+            "open": open_count,
+            "in_progress": in_progress_count,
+            "resolved": resolved_count,
+            "closed": closed_count
+        }
 
     def filter_by_status(self,status):
         results = []

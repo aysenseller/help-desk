@@ -1,7 +1,7 @@
 import json
 from ticket import Ticket
 
-def save_tickets(tickets, filename="ticket.json"):
+def save_tickets(tickets, filename="tickets.json"):
     data = []
 
     for ticket in tickets:
@@ -10,7 +10,8 @@ def save_tickets(tickets, filename="ticket.json"):
             "title":ticket.title,
             "description":ticket.description,
             "priority":ticket.priority,
-            "status":ticket.status
+            "status":ticket.status,
+            "due_date":ticket.due_date
         })
 
 
@@ -33,6 +34,7 @@ def load_tickets(filename="tickets.json"):
 
             ticket.id = item["id"]
             ticket.status = item["status"]
+            ticket.due_date = item.get("due_date")
 
             tickets.append(ticket)
 

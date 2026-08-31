@@ -9,6 +9,7 @@ class Ticket:
         self.description = description
         self.priority = priority
         self.status = "Open"
+        self.due_date= None
 
     def __str__(self):
         return f"[{self.id}] {self.title} | {self.priority} | {self.status}"

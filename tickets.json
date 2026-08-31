@@ -1,9 +1,18 @@
 [
     {
-        "id": 1,
-        "title": "a",
-        "description": "e",
-        "priority": "low",
-        "status": "Open"
+        "id": 19,
+        "title": "Ticket 1",
+        "description": "Test",
+        "priority": "High",
+        "status": "Resolved",
+        "due_date": null
+    },
+    {
+        "id": 20,
+        "title": "Ticket 2",
+        "description": "Test",
+        "priority": "Low",
+        "status": "Open",
+        "due_date": null
     }
 ]
