@@ -1,4 +1,26 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+
 .venv/
-__pycache__/
+venv/
+env/
+
+# macOS
+
+.DS_Store
+
+# IDE
+
+.idea/
+.vscode/
+
+# Pytest
+
 .pytest_cache/
-*.pyc
+.coverage
+htmlcov/
